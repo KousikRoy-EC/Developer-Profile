@@ -1,12 +1,10 @@
-
-import React from 'react';
 import type { Experience, Project, SkillCategory, Achievement } from './types.ts';
 
 export const experiences: Experience[] = [
   {
     role: 'Embedded Developer',
-    company: 'Quantum Networks',
-    period: 'Dec 2023 - Present',
+    company: 'Quantum Networks (ZenCC)',
+    period: 'July 2024 - Present',
     location: 'Ahmedabad',
     description: [
       'Designed and implemented feature enhancements on access point products using C and Python Scripting within a Linux environment.',
@@ -15,6 +13,29 @@ export const experiences: Experience[] = [
       'Collaborated closely with cross-functional teams to deliver robust networking solutions aligned with IEEE 802.11.',
     ],
     skills: ['C', 'C++', 'Python', 'Docker', 'OpenWrt', 'SDK-Qualcomm', 'iptables'],
+  },
+   {
+    role: 'Full Stack Engineer',
+    company: 'Caarya Innovation',
+    period: 'Dec 2023 - Jul 2024',
+    location: 'Hyderabad',
+    description: [
+      'Led front-end development for multiple projects ( Chronos, BackPone, Caarya HQ, Caarya PMO, Caarya Life, Boop Pet Management Portal ), creating responsive UI screens from scratch and ensuring high-quality user interfaces.',
+      'Implemented redux for state management from scratch and utilized tailwind for consistent styling, enhancing application performance, and user experience',
+      'Integrated backend API’s using node and express, facilitating efficient data handling and seamless communication between front-end and back-end systems.',
+    ],
+    skills: ['React', 'Redux', 'API testing', 'Node.js', 'Express', 'Tailwind CSS', 'JavaScript'],
+  },
+   {
+    role: 'Content Management and Software Development Intern',
+    company: 'Remasto',
+    period: 'May 2023 - Jul 2023',
+    location: 'Ahmedabad',
+    description: [
+      'During my time at Remasto i was responsible for their content management and parallely i was also responsible for managing the database integration with the FE.',
+      'I also contributed to the development of new features and improvements for their web applications.',
+    ],
+    skills: ['Development', 'Database', 'API', 'Automation'],
   },
   {
     role: 'Embedded Developer Intern',
@@ -31,14 +52,14 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
-    title: 'Wifi Development',
+    title: 'Wifi Feature Development',
     description: [
       'Played a key role in the device bring-up of Access Points, aligning with hardware and networking standards.',
-      'Led the feature development team of 2 members, ensuring that the AP met the highest standards of performance and reliability.',
-      'Worked on C based agent to fetch the data from netlink and ioctl driver to avoid system calls, reducing device bring up time.',
+      'Led the multiple feature development, ensuring that the AP met the highest standards of performance and reliability.',
+      'Worked on C based agent to fetch the data from ioctl driver to avoid the repetitive system calls, reducing device resource consumption.',
       'Implemented features like application filtering and application statistics.',
     ],
-    technologies: ['C', 'Linux', 'Networking', 'Netlink', 'ioctl'],
+    technologies: ['C', 'Linux', 'Networking', 'ioctl'],
   },
   {
     title: 'Handwritten Text Classification',
@@ -47,6 +68,23 @@ export const projects: Project[] = [
       'Trained a robust Keras model for handwritten text detection, leveraging custom CNN layers to achieve high accuracy.',
     ],
     technologies: ['Python', 'Keras', 'CNN', 'Machine Learning'],
+  },
+   {
+    title: 'Digital Voting System',
+    description: [
+      'Developed a secure and efficient voting system by integrating Python and Arduino, utilizing OpenCV for facial recognition, and enabling real-time vote tracking and result display through LED indicators and push-button activation.',
+      'Implemented seamless serial communication using the PyFirmata library, ensuring accurate vote synchronization and delivering a reliable, user-friendly solution for real-time voting and result visualization.',
+    ],
+    technologies: ['Python', 'Arduino', 'OpenCV'],
+  },
+    {
+    title: 'Social Networking Application',
+    description: [
+      'Developed a Facebook clone web application with features like authentication, new post uploading, realtime post liking, following, and unfollowing user, resulting in improved user engagement and experience.',
+      'Utilized React Hooks and Redux to manage application state and simplify the code structure, resulting in improved code quality and maintainability.',
+    ],
+    technologies: ['React', 'Redux', 'Tailwind'],
+
   },
 ];
 
@@ -57,17 +95,20 @@ export const skillCategories: SkillCategory[] = [
     },
     {
         name: 'Technologies',
-        skills: ['ARM', 'I2C', 'SPI', 'UART', 'GIT', 'OpenCV', 'Arduino', 'Linux', 'OpenWRT', 'MQTT', 'Docker']
+        skills: ['React', 'Redux' , 'Tailwind', 'Node', 'Express', 'API' , 'ARM', 'I2C', 'GIT', 'OpenCV', 'Arduino', 'Linux', 'OpenWRT', 'MQTT', 'Docker']
     },
     {
-        name: 'Networking',
-        skills: ['IEEE 802.11', 'iptables', 'Netlink', 'ioctl']
-    }
+        name: 'Dev Tools',
+        skills: ['Vscode' , 'Git/Github', 'Collab' , 'Jupyter', 'AI Tools (ChatGPT, LM, Gemini)']
+    },
 ];
 
 export const achievements: Achievement[] = [
     {
-        description: 'Awarded with DXC Progressive mind Scholarship.'
+        description: 'Awarded with DXC Progressive Mind Scholarship.'
+    },
+    {
+        description: 'State level volleyball player (MAH2467)'
     },
     {
         description: 'Organised and Judged multiple Coding Hackathons at college level.'
@@ -84,8 +125,8 @@ export const navLinks = [
 
 export const socialLinks = {
   email: 'mailto:kaushikroy1001@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/kousik-roy-embedded/', // Placeholder
-  github: 'https://github.com/kousik-roy-1001', // Placeholder
+  linkedin: 'https://www.linkedin.com/in/kousik-roy-9a0989200/', 
+  github: 'https://github.com/KousikRoy-EC', 
 };
 
 // SVG Icons

@@ -11,10 +11,10 @@ const HeroSection: React.FC = () => {
             Kousik Roy
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-accent dark:text-accent-hover font-semibold">
-            Embedded Systems Developer
+            Embedded Software Developer
           </p>
           <p className="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-            Passionate about building robust firmware and software solutions for networking and IoT. Turning complex problems into elegant, efficient code.
+            Passionate about building robust firmware and software solutions for my clients. Turning complex problems into elegant, efficient code design.
           </p>
           <div className="mt-8 flex justify-center space-x-6">
             <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-hover transition-transform duration-300 hover:scale-110">
