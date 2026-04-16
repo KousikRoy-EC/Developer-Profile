@@ -1,7 +1,7 @@
 
 import React from 'react';
 import AnimatedSection from './AnimatedSection.tsx';
-import profileImage from '../assets/images/kousik_roy.jpeg';
+import profileImage from '../assets/images/kousik_roy.png';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h2 className="text-4xl font-serif font-bold text-center text-gray-900 dark:text-white mb-12">
@@ -25,9 +25,9 @@ const AboutSection: React.FC = () => {
               I am an Embedded Software Engineer with a B-tech in Electronics and Communication from Charotar University of Science and Technology (CGPA: 9.25/10.0). My expertise lies in C, C++, and Python and multiple frameworks and SDK's.
             </p>
             <p>
-              With hands-on experience in developing features for network access points and creating robust scalable automation scripts, I thrive on solving complex technical challenges. I am dedicated to writing clean, efficient, and reliable code to build cutting-edge technology.
+              With hands-on experience in developing features for wireless devices and creating robust scalable automation scripts, I thrive on solving complex technical challenges. I am dedicated to writing clean, efficient, and reliable code to build cutting-edge technology.
             </p>
-             <p>
+            <p>
               I am also passionate about Web Application Development and have delivered multiple frontend and backend projects as a gig worker.
             </p>
           </div>

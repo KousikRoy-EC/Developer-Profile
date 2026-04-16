@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
             Kousik Roy
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-accent dark:text-accent-hover font-semibold">
-            Embedded Software Developer
+            Embedded Software Engineer
           </p>
           <p className="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
             Passionate about building robust firmware and software solutions for my clients. Turning complex problems into elegant, efficient code design.

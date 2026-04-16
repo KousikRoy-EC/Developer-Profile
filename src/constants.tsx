@@ -2,19 +2,21 @@ import type { Experience, Project, SkillCategory, Achievement } from './types.ts
 
 export const experiences: Experience[] = [
   {
-    role: 'Embedded Developer',
-    company: 'Quantum Networks (ZenCC)',
-    period: 'July 2024 - Present',
+    role: 'Embedded Software Engineer',
+    company: 'Quantum Networks',
+    period: 'July 2024 - May 2026',
     location: 'Ahmedabad',
     description: [
-      'Designed and implemented feature enhancements on access point products using C and Python Scripting within a Linux environment.',
-      'Developed and maintained configuration files to enable and test new features in various networking modules.',
-      'Integrated with the Rudder Cloud Controller to streamline and verify wireless and wired configurations remotely.',
-      'Collaborated closely with cross-functional teams to deliver robust networking solutions aligned with IEEE 802.11.',
+      'Designed and integrated Wi-Fi 7 (IEEE 802.11be) tri-band advanced features including Multi-Link Operation (MLO) and Preamble Puncturing into the Qualcomm QSDK wireless driver, and migrated legacy Wi-Fi features to the MLO/MLD interface ensuring backward compatibility.',
+      'Implemented kernel link-state monitoring in hostapd wired 802.1X driver using NETLINK ROUTE socket and RTM NEWLINK parsing triggered bulk STA disassociation and RADIUS session teardown on carrier loss with full dynamic VLAN bridge migration via driver ops callbacks.',
+      'Developed a custom nDPI Netfilter BSP package, enhancing kernel-level protocol detection and Deep Packet Inspection (DPI) accuracy.',
+      'Implemented multi-session ID preservation across Wi-Fi roaming and steering events in hostapd, ensuring seamless session tracking for clients during BSS transitions without re-authentication overhead.',
+      'Developed bandwidth enforcement mechanism that extracts WISPr/VSA attributes from RADIUS authentication and translates them into tc-based QoS policies.',
+      'Collaborated with cross-functional teams to integrate wireless/wired configuration subsystems with a Cloud Controller, ensuring IEEE 802.11 compliance.',
     ],
-    skills: ['C', 'C++', 'Python', 'Docker', 'OpenWrt', 'SDK-Qualcomm', 'iptables'],
+    skills: ['C', 'C++', 'Python', 'Docker', 'OpenWrt', 'SDK-Qualcomm', 'iptables', 'hostapd', 'netlink', 'RADIUS', 'tc', 'nDPI'],
   },
-   {
+  {
     role: 'Full Stack Engineer',
     company: 'Caarya Innovation',
     period: 'Dec 2023 - Jul 2024',
@@ -26,10 +28,10 @@ export const experiences: Experience[] = [
     ],
     skills: ['React', 'Redux', 'API testing', 'Node.js', 'Express', 'Tailwind CSS', 'JavaScript'],
   },
-   {
+  {
     role: 'Content Management and Software Development Intern',
     company: 'Remasto',
-    period: 'May 2023 - Jul 2023',
+    period: 'Aug 2023 - Oct 2023',
     location: 'Ahmedabad',
     description: [
       'During my time at Remasto i was responsible for their content management and parallely i was also responsible for managing the database integration with the FE.',
@@ -43,24 +45,14 @@ export const experiences: Experience[] = [
     period: 'May 2023 - Jul 2023',
     location: 'Ahmedabad',
     description: [
-      'Developed a custom Watchdog Timer in C, enabling fault recovery and ensuring system reliability by detecting software anomalies.',
-      'Implemented automation testing script for system-level APIs, reducing manual test efforts and improving defect detection accuracy.',
+      'Implemented a POSIX-compliant boot diagnostic script that automatically classifies system reboots (Cold Boot, Kernel Panic, OOM, User-init) by analyzing pstore dumps and U-Boot variables.',
+      'Reduced Root Cause Analysis (RCA) time for device stability issues by integrating diagnostic scripts with system services (sysupgrade) and hardware events (GPIO-triggered resets).',
     ],
     skills: ['C', 'Python', 'API testing', 'Automation'],
   },
 ];
 
 export const projects: Project[] = [
-  {
-    title: 'Wifi Feature Development',
-    description: [
-      'Played a key role in the device bring-up of Access Points, aligning with hardware and networking standards.',
-      'Led the multiple feature development, ensuring that the AP met the highest standards of performance and reliability.',
-      'Worked on C based agent to fetch the data from ioctl driver to avoid the repetitive system calls, reducing device resource consumption.',
-      'Implemented features like application filtering and application statistics.',
-    ],
-    technologies: ['C', 'Linux', 'Networking', 'ioctl'],
-  },
   {
     title: 'Handwritten Text Classification',
     description: [
@@ -69,50 +61,49 @@ export const projects: Project[] = [
     ],
     technologies: ['Python', 'Keras', 'CNN', 'Machine Learning'],
   },
-   {
-    title: 'Digital Voting System',
+  {
+    title: 'Register-Level I2C Driver Development',
     description: [
-      'Developed a secure and efficient voting system by integrating Python and Arduino, utilizing OpenCV for facial recognition, and enabling real-time vote tracking and result display through LED indicators and push-button activation.',
-      'Implemented seamless serial communication using the PyFirmata library, ensuring accurate vote synchronization and delivering a reliable, user-friendly solution for real-time voting and result visualization.',
+      'Implemented a bare-metal I2C master driver for STM32 using C, directly configuring peripheral registers for clock control and start/stop conditions.',
+      'Developed robust transmit/receive APIs for external I2C slave communication, ensuring efficient hardware utility without abstract HAL overhead.',
+      'Implemented interrupt-driven data transfer with error handling for ACK/NACK and timeout conditions, ensuring reliable communication in embedded systems.',
     ],
-    technologies: ['Python', 'Arduino', 'OpenCV'],
+    technologies: ['C', 'STM32', 'ARM Cortex-M', 'I2C', 'Interrupts'],
   },
-    {
-    title: 'Social Networking Application',
+  {
+    title: 'Multi-threaded Cron Daemon (qsched)',
     description: [
-      'Developed a Facebook clone web application with features like authentication, new post uploading, realtime post liking, following, and unfollowing user, resulting in improved user engagement and experience.',
-      'Utilized React Hooks and Redux to manage application state and simplify the code structure, resulting in improved code quality and maintainability.',
+      'Built a multi-threaded cron daemon replicating Linux crond with time-based job scheduling and parallel task execution. Implemented signal handling for automatic zombie process reaping and parent-child IPC.',
     ],
-    technologies: ['React', 'Redux', 'Tailwind'],
-
+    technologies: ['C', 'Linux', 'IPC', 'Signal Handling'],
   },
 ];
 
 export const skillCategories: SkillCategory[] = [
-    {
-        name: 'Languages',
-        skills: ['C', 'C++', 'Python', 'JavaScript', 'Shell Scripting']
-    },
-    {
-        name: 'Technologies',
-        skills: ['React', 'Redux' , 'Tailwind', 'Node', 'Express', 'API' , 'ARM', 'I2C', 'GIT', 'OpenCV', 'Arduino', 'Linux', 'OpenWRT', 'MQTT', 'Docker']
-    },
-    {
-        name: 'Dev Tools',
-        skills: ['Vscode' , 'Git/Github', 'Collab' , 'Jupyter', 'AI Tools (ChatGPT, LM, Gemini)']
-    },
+  {
+    name: 'Languages',
+    skills: ['Embedded C', 'C', 'C++', 'Python', 'JavaScript', 'Bash Scripting']
+  },
+  {
+    name: 'Technologies',
+    skills: ['Interrupts', 'MLO', 'Hostapd', 'Radius', '802.11', 'GPIO', 'DMA', 'TCP/IP', 'SPI', 'MQTT', 'UART', 'Linux Kernel', 'openWRT', 'Node', 'STM32', 'API', 'ARM Cortex', 'I2C', 'OpenCV', 'Arduino', 'Docker']
+  },
+  {
+    name: 'Dev Tools',
+    skills: ['Vscode', 'Git/Github', 'Make / CMake', 'GCC toolchain', 'AI Tools (ChatGPT, Claude Code, Gemini)']
+  },
 ];
 
 export const achievements: Achievement[] = [
-    {
-        description: 'Awarded with DXC Progressive Mind Scholarship.'
-    },
-    {
-        description: 'State level volleyball player (MAH2467)'
-    },
-    {
-        description: 'Organised and Judged multiple Coding Hackathons at college level.'
-    }
+  {
+    description: 'Awarded with DXC Progressive Mind Scholarship.'
+  },
+  {
+    description: 'State level volleyball player (MAH2467)'
+  },
+  {
+    description: 'Organised and Judged multiple Coding Hackathons at college level.'
+  }
 ];
 
 export const navLinks = [
@@ -125,8 +116,8 @@ export const navLinks = [
 
 export const socialLinks = {
   email: 'mailto:kaushikroy1001@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/kousik-roy-9a0989200/', 
-  github: 'https://github.com/KousikRoy-EC', 
+  linkedin: 'https://www.linkedin.com/in/kousikkumar-roy-9a0989200/',
+  github: 'https://github.com/KousikRoy-EC',
 };
 
 // SVG Icons
@@ -143,19 +134,19 @@ export const MoonIcon = ({ className }: { className?: string }) => (
 );
 
 export const GithubIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 16 16" fill="currentColor">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 16 16" fill="currentColor">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+  </svg>
 );
 
 export const LinkedinIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="currentColor">
-        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+  </svg>
 );
 
 export const MailIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="currentColor">
-        <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+  </svg>
 );
